@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Redirecting</title>
     <script>
-       
-        const urls = [
+        window.onload = function() {
+ const urls = [
 "https://twitter.com/intent/tweet?text=Join%20%40bbazaar_io%20for%20easy%20swaps,%20exciting%20events,%20and%20an%20ongoing%20giveaway!%20Participate%20now!%20%F0%9F%8E%89%20%23CryptoSwaps%20%23Giveaway%20%23BBazaar",
 "https://twitter.com/intent/tweet?text=Looking%20for%20simple%20swaps%20and%20fun%20events?%20Join%20%40bbazaar_io%20and%20participate%20in%20the%20giveaway!%20%F0%9F%9A%80%20%23BBazaar%20%23CryptoEvents%20%23Giveaway",
 "https://twitter.com/intent/tweet?text=Make%20swaps%20easy%20with%20%40bbazaar_io!%20Don't%20miss%20the%20giveaway%20going%20on%20now!%20Join%20today!%20%F0%9F%92%B8%20%23CryptoSwaps%20%23Giveaway",
@@ -80,12 +79,17 @@
 "https://twitter.com/intent/tweet?text=Make%20trading%20easy%20with%20%40bbazaar_io!%20Join%20the%20community%20now%20for%20our%20ongoing%20giveaway%20and%20events!%20%F0%9F%8E%89%20%23BBazaar%20%23CryptoSwaps",
 "https://twitter.com/intent/tweet?text=Seamless%20swaps%20and%20exclusive%20events%20await%20you%20at%20%40bbazaar_io!%20Join%20now%20and%20participate%20in%20our%20giveaway!%20%F0%9F%92%B8%20%23BBazaar%20%23CryptoCommunity",
 "https://twitter.com/intent/tweet?text=Join%20the%20community%20at%20%40bbazaar_io!%20Easy%20trading,%20exclusive%20events,%20and%20a%20chance%20to%20win%20in%20our%20giveaway!%20%F0%9F%9A%80%20%23BBazaar%20%23CryptoLife",
-
-        ];
-        window.location.href = urls[Math.floor(Math.random() * urls.length)];
+            ];
+            
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const randomUrl = urls[randomIndex];
+            
+            // Redirect to the random URL
+            window.location.href = randomUrl;
+        };
     </script>
 </head>
 <body>
-    Redirecting..
+    <p>Redirecting...</p>
 </body>
 </html>
